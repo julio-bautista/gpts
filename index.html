@@ -14,7 +14,7 @@
     header p { font-size: 1.2rem; }
     header a.button { display: inline-block; margin-top: 1rem; background: #e53935; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 8px; font-weight: bold; }
 
-    .section { padding: 3rem 2rem; max-width: 1000px; margin: auto; }
+    .section { padding: 2rem 2rem; max-width: 1000px; margin: auto; }
     .section h2 { color: #004d40; font-size: 2rem; margin-bottom: 1rem; }
     .features, .gpts, .benefits, .testimonials { display: flex; flex-wrap: wrap; gap: 1.5rem; }
     .card { background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); flex: 1 1 450px; }
@@ -28,27 +28,132 @@
 
     footer { text-align: center; padding: 2rem; font-size: 0.9rem; background: #ddd; color: #444; }
     footer a { color: #004d40; text-decoration: none; font-weight: bold; }
-  </style>
+  
+    @media screen and (max-width: 768px) {
+        .features {
+            flex-direction: column;
+            align-items: center;
+        }
+        .features .card {
+            flex: 1 1 100% !important;
+            max-width: 100% !important;
+        }
+    }
+    
+<style>
+  :root {
+    --frost-bg: #f1f3f5;
+    --frost-white: #ffffffcc;
+    --frost-dark: #1e1e1e;
+    --frost-gray: #444;
+    --frost-accent: #a8dadc;
+    --frost-primary: #457b9d;
+    --frost-secondary: #dee2e6;
+  }
+
+  .carousel-container {
+    background: var(--frost-bg);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .carousel-slide {
+    display: none;
+    width: 100%;
+    max-width: 1000px;
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    display: block;
+  }
+
+  .carousel-slide.active {
+    display: block;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+
+  .carousel-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 6px;
+    background-color: var(--frost-secondary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .carousel-dot.active {
+    background-color: var(--frost-primary);
+  }
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  color: #004d40;
+  transition: background 0.3s;
+}
+.carousel-btn:hover {
+  background-color: white;
+}
+.carousel-btn.prev {
+  left: 20px;
+}
+.carousel-btn.next {
+  right: 20px;
+}
+
+</style>
+</style>
 </head>
 <body>
-<header>
-<h1>
-    GPTs que entienden tu negocio
-   </h1>
-<p>
-    Asistentes inteligentes creados por Julio Bautista. Especializados en marketing, política, cultura y más.
-   </p>
-<a class="button" href="#gpts">
-    🔍 Descúbrelos ahora
-   </a>
+
+<header style="position: relative; height: 500px; background-image: url('recorte_1500x500.png'); background-size: cover; background-position: center;">
+<div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 77, 64, 0.4); display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-align: center;">
+<h1 style="font-size: 2.8rem; margin: 0 1rem;">GPTs que entienden tu negocio</h1>
+</div>
 </header>
+
+<section class="section" id="gpts-intro">
+<h2>🔥 ¿Por qué usar estos GPTs?</h2>
+<div class="features" style="display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: space-between;">
+<div class="card" style="flex: 1 1 calc(33.333% - 1rem); background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<h3>⚡ Diseñados para ser útiles desde el primer clic</h3>
+<p>No pierdas tiempo instalando nada. Solo entra, elige un GPT y empieza a resolver tareas reales al instante.</p>
+</div>
+<div class="card" style="flex: 1 1 calc(33.333% - 1rem); background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<h3>🧠 Hablan como tú</h3>
+<p>Solo escribe lo que necesitas en lenguaje natural… ¡y deja que la magia ocurra! Sin tecnicismos. Entienden lo que necesitas y van directo al grano.</p>
+</div>
+</div>
+</section>
 <section class="section" id="gpts">
 <h2>
-    Explora mis GPTs GRATIS
+    Usa GPTs inteligentes listos para ayudarte en marketing, educación, política, salud y mucho más.
    </h2>
 <div class="gpts">
 <div class="gpts-grid" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between;"><div style="display: flex; gap: 2rem; justify-content: space-between; margin-bottom: 2rem;"><div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<img alt="Image-ADS" src="Image-ADS.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
+<img alt="Image-ADS" src="gpts/Image-ADS.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
 <h3>
         🧠 Image-ADS
        </h3>
@@ -73,7 +178,7 @@
         🔗 Abrir GPT
        </a>
 </div><div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<img alt="Corazón Chilango" src="CorazónChilango.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
+<img alt="Corazón Chilango" src="gpts/CorazónChilango.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
 <h3>
         🌆❤️ Corazón Chilango
        </h3>
@@ -101,7 +206,7 @@
         🔗 Abrir GPT
        </a>
 </div><div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<img alt="#SinRodeos (Orientador Emocional)" src="SinRodeos.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
+<img alt="#SinRodeos (Orientador Emocional)" src="gpts/SinRodeos.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
 <h3>
         🧠 #SinRodeos (Orientador Emocional).
        </h3>
@@ -126,7 +231,7 @@
         🔗 Abrir GPT
        </a>
 </div></div><div style="display: flex; gap: 2rem; justify-content: space-between; margin-bottom: 2rem;"><div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<img alt="ConexionDivina" src="ConexionDivina.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
+<img alt="ConexionDivina" src="gpts/ConexionDivina.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
 <h3>
         🧘 Conexión-Divina
        </h3>
@@ -151,7 +256,7 @@
         🔗 Abrir GPT
        </a>
 </div><div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<img alt="Demo GPT" src="demo.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
+<img alt="Demo GPT" src="gpts/demo.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
 <h3>🔧 GPT de demostración</h3>
 <p>Este espacio está reservado para un futuro GPT. Aquí aparecerá su descripción.</p>
 <ul>
@@ -162,7 +267,7 @@
 </ul>
 <a href="#">🔗 Abrir GPT</a>
 </div><div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<img alt="Demo GPT" src="demo.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
+<img alt="Demo GPT" src="gpts/demo.png" style="max-width: 100%; height: auto; margin-bottom: 1rem; border-radius: 8px;"/>
 <h3>🔧 GPT de demostración</h3>
 <p>Este espacio está reservado para un futuro GPT. Aquí aparecerá su descripción.</p>
 <ul>
@@ -175,45 +280,17 @@
 </div></div></div>
 </div></section>
 <section class="section">
-<h2>
-    ¿Qué son mis GPTs?
-   </h2>
-<div class="features">
-<div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<h3>
-      🤖 Inteligentes
-     </h3>
-<p>
-      GPTs listos para ayudarte a resolver tareas reales.
-     </p>
-</div>
-<div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<h3>
-      🇲🇽 Culturizados
-     </h3>
-<p>
-      Adaptados a la forma de hablar y pensar mexicana.
-     </p>
-</div>
-<div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<h3>
-      🎯 Especializados
-     </h3>
-<p>
-      Marketing, política, educación, salud y más.
-     </p>
-</div>
-<div class="card" style="flex: 1; max-width: 32%; background: white; padding: 1rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: left; display: flex; flex-direction: column; align-items: center;">
-<h3>
-      💡 Usables al instante
-     </h3>
-<p>
-      No necesitas instalar nada, ¡solo entra y úsalo!
-     </p>
-</div>
-</div>
+
+
+<section id="landing-gpt-pymes" style="position: relative; height: 100vh; background: linear-gradient(to right, #1d3557, #457b9d); overflow: hidden; display: flex; align-items: center; justify-content: center; color: white;">
+  <img src="fondo-gpts.jpg" alt="Solicta una Demo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; z-index: 1;"/>
+  <div style="position: relative; z-index: 2; max-width: 900px; text-align: center; padding: 2rem;">
+    <h1 style="font-size: 3.2rem; font-weight: bold; margin-bottom: 1rem;">Tu nuevo equipo digital de marketing y administración</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 2rem;">Automatiza tareas, genera contenido y atiende clientes sin contratar más personal. Diseñamos GPTs que piensan como tú y trabajan 24/7 para tu negocio.</p>
+    <a href="https://wa.me/525550695162" style="background: #e63946; color: white; padding: 1rem 2rem; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">📲 Solicita tu GPT personalizado</a>
+  </div>
 </section>
-<section class="section">
+
 <h2>
     Beneficios reales
    </h2>
@@ -255,7 +332,87 @@
 </div>
 </div>
 </section>
+
+<section class="carousel-container">
+  <div class="carousel-slide active"><img src="slides-carrousel/slide1.jpg" alt="Slide 1"></div>
+  <div class="carousel-slide"><img src="slides-carrousel/slide2.jpg" alt="Slide 2"></div>
+  <div class="carousel-slide"><img src="slides-carrousel/slide3.jpg" alt="Slide 3"></div>
+  <div class="carousel-slide"><img src="slides-carrousel/slide4.jpg" alt="Slide 4"></div>
+  <div class="carousel-slide"><img src="slides-carrousel/slide5.jpg" alt="Slide 5"></div>
+  <div class="carousel-slide"><img src="slides-carrousel/slide6.jpg" alt="Slide 6"></div>
+  
+  <button class="carousel-btn prev">&#10094;</button>
+  <button class="carousel-btn next">&#10095;</button>
+
+  <div class="carousel-dots">
+    <span class="carousel-dot active"></span>
+    <span class="carousel-dot"></span>
+    <span class="carousel-dot"></span>
+    <span class="carousel-dot"></span>
+    <span class="carousel-dot"></span>
+    <span class="carousel-dot"></span>
+  </div>
+</section>
+
+
+<script>
+  const slides = document.querySelectorAll('.carousel-slide');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let currentIndex = 0;
+  let intervalId;
+
+  function showSlide(index) {
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    showSlide(currentIndex);
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      currentIndex = i;
+      showSlide(currentIndex);
+      resetAutoSlide();
+    });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    nextSlide();
+    resetAutoSlide();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    prevSlide();
+    resetAutoSlide();
+  });
+
+  function startAutoSlide() {
+    intervalId = setInterval(nextSlide, 5000);
+  }
+
+  function resetAutoSlide() {
+    clearInterval(intervalId);
+    startAutoSlide();
+  }
+
+  startAutoSlide();
+</script>
+
+
 <section class="section">
+
 <h2>
     Lo que dicen de mis GPTs
    </h2>
@@ -303,5 +460,69 @@
     </a>
 </p>
 </footer>
+
+<style>
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+
+  .whatsapp-fixed {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #25D366;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: heartbeat 1.8s infinite;
+    z-index: 9999;
+  }
+
+  .whatsapp-fixed svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+  }
+
+  .whatsapp-fixed:hover::after {
+    content: " Escríbeme por WhatsApp";
+    position: absolute;
+    top: 50%;
+    right: 110%;
+    transform: translateY(-50%);
+    background: #004d40;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  @media (max-width: 600px) {
+    .whatsapp-fixed {
+      width: 50px;
+      height: 50px;
+      top: 15px;
+      right: 15px;
+    }
+
+    .whatsapp-fixed svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>
+<a aria-label="Contáctame por WhatsApp" class="whatsapp-fixed" href="https://wa.me/525550695162" target="_blank">
+<svg viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.002 3C9.374 3 3.999 8.375 3.999 15c0 2.5.876 4.82 2.376 6.68L4 29l7.506-2.315C13.164 27.56 14.558 28 16.001 28c6.627 0 12.002-5.375 12.002-12S22.63 3 16.002 3zm0 22c-1.187 0-2.33-.262-3.37-.772l-.242-.117-4.444 1.371 1.39-4.187-.155-.248C7.818 19.027 7 17.066 7 15c0-4.972 4.03-9 9.002-9 4.97 0 9 4.028 9 9s-4.03 9-9 9zm4.63-6.635c-.258-.129-1.523-.75-1.758-.835-.235-.086-.406-.13-.577.13-.172.26-.664.835-.813 1.005-.149.172-.297.193-.555.065-.258-.129-1.086-.4-2.067-1.276-.765-.683-1.282-1.524-1.433-1.783-.149-.26-.016-.4.113-.529.116-.116.258-.3.387-.451.129-.15.172-.258.258-.43.086-.172.043-.322-.021-.451-.065-.129-.577-1.394-.79-1.91-.208-.5-.419-.433-.577-.44-.149-.006-.322-.008-.494-.008-.172 0-.451.065-.688.322s-.903.883-.903 2.151.925 2.495 1.055 2.665c.129.17 1.82 2.78 4.416 3.899.617.266 1.098.425 1.473.544.619.197 1.18.17 1.624.104.496-.075 1.523-.623 1.737-1.223.215-.6.215-1.113.15-1.223-.065-.111-.235-.172-.494-.301z"></path>
+</svg>
+</a>
 </body>
 </html>
