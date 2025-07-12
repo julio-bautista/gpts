@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo GPTs Pro</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; padding: 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+    h1 { text-align: center; color: #004d40; margin-bottom: 2rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: scale(1.02); }
+    .card h2 { color: #e53935; margin-bottom: 1rem; }
+    .card p { color: #333; }
+    .card a { display: inline-block; margin-top: 1rem; background: #004d40; color: white; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    form { margin-top: 3rem; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+    form label { display: block; margin-bottom: 0.5rem; font-weight: bold; color: #004d40; }
+    form input, form textarea { width: 100%; padding: 0.8rem; margin-bottom: 1.5rem; border-radius: 8px; border: 1px solid #ccc; font-size: 1rem; }
+    form input[type="checkbox"] { width: auto; margin-right: 0.5rem; }
+    form button { background: #e53935; color: white; padding: 0.8rem 1.5rem; border: none; border-radius: 8px; font-size: 1rem; font-weight: bold; cursor: pointer; }
+    .privacy { font-size: 0.9rem; color: #555; }
+    .success { color: green; font-weight: bold; }
+  </style>
+  <script>
+    function validarFormulario(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const telefono = document.getElementById('telefono').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const aviso = document.getElementById('aviso').checked;
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const telRegex = /^[0-9\-\+\s\(\)]{7,}$/;
+
+      if (nombre === "" || telefono === "" || email === "") {
+        alert("Por favor completa todos los campos.");
+        return false;
+      }
+
+      if (!telRegex.test(telefono)) {
+        alert("Por favor ingresa un número de teléfono válido.");
+        return false;
+      }
+
+      if (!emailRegex.test(email)) {
+        alert("Por favor ingresa un correo electrónico válido.");
+        return false;
+      }
+
+      if (!aviso) {
+        alert("Debes aceptar el aviso de privacidad para continuar.");
+        return false;
+      }
+
+      alert("✅ Mensaje enviado correctamente. Gracias por tu interés.");
+      document.getElementById("formulario-demo").reset();
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Explora los GPTs Pro</h1>
+    
+<div style="text-align: center; margin: 2rem 0;">
+  <a href="index.html" style="background: #457b9d; color: white; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: bold; text-decoration: none;">← Volver al inicio</a>
+</div>
+<div class="grid">
+      <div class="card">
+  <img src="iconsdemo/pm-icon.jpg" style="width:100%; border-radius:10px; margin-bottom:1rem;">
+        <h2>PROMPTUS MAXIMUS</h2>
+        <p>Genera prompts complejos y visualmente impactantes con un solo mensaje.</p>
+        <a href="pm.html">Ver demo</a>
+      </div>
+      <div class="card">
+  <img src="iconsdemo/jb-icon.jpg" style="width:100%; border-radius:10px; margin-bottom:1rem;">
+        <h2>JULIO BAUTISTA</h2>
+        <p>Digital Marketing & Political Strategy.</p>
+        <a href="jb.html">Ver demo</a>
+      </div>
+      <div class="card">
+  <img src="iconsdemo/fi-icon.jpg" style="width:100%; border-radius:10px; margin-bottom:1rem;">
+        <h2>FOTOS IMPRESIONANTES</h2>
+        <p>Transforma fotos de celular, bocetos y textos en campañas visuales de alto impacto.</p>
+        <a href="fi.html">Ver demo</a>
+      </div>
+      <div class="card">
+  <img src="iconsdemo/nbs-icon.jpg" style="width:100%; border-radius:10px; margin-bottom:1rem;">
+        <h2>NÓMADA BRAND STUDIO</h2>
+        <p>¡Diseña tu logo desde cero y hazlo único!</p>
+        <a href="nbs.html">Ver demo</a>
+      </div>
+      <div class="card">
+  <img src="iconsdemo/tcm-icon.jpg" style="width:100%; border-radius:10px; margin-bottom:1rem;">
+        <h2>THA CLICK MONSTA!</h2>
+        <p>Genera contenidos virales para tus RRSS.</p>
+        <a href="tcm.html">Ver demo</a>
+      </div>
+      <div class="card">
+  <img src="iconsdemo/tbc-icon.jpg" style="width:100%; border-radius:10px; margin-bottom:1rem;">
+        <h2>ThumBaitCracks</h2>
+        <p>Crea miniaturas y banners impactantes para YouTube.</p>
+        <a href="tbc.html">Ver demo</a>
+      </div>
+    </div>
+
+    <form id="formulario-demo" onsubmit="validarFormulario(event)">
+      <h2 style="margin-top: 3rem; color:#004d40;">Solicita tu acceso demo</h2>
+      <label for="nombre">Nombre completo:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label class="privacy">
+        <input type="checkbox" id="aviso" name="aviso" required>
+        He leído y acepto el aviso de privacidad y los términos de uso.
+      </label>
+
+      <button type="submit">Enviar solicitud</button>
+    </form>
+  </div>
+</body>
+</html>
