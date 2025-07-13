@@ -47,6 +47,35 @@
         width: 100%;
       }
     }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 201, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0); }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      color: white;
+      background: linear-gradient(45deg, #00C9FF, #92FE9D);
+      background-size: 200% 200%;
+      animation: gradientShift 5s ease infinite, pulse 2s infinite;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.06);
+      filter: brightness(1.1);
+    }
   </style>
 </head>
 <body>
@@ -78,51 +107,22 @@
         </svg>
         Visualiza tus ideas con precisión emocional
       </h2>
-<p>
-  <!-- 🎨 Icono colorido -->
-  <svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:6px;" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#FF7E5F;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#FEB47B;stop-opacity:1" />
-      </linearGradient>
-    </defs>
-    <path fill="url(#grad1)" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
-  </svg>
-  <strong>Diseño Visual con Inteligencia Creativa</strong><br>
-  Transforma ideas complejas en imágenes poderosas con prompts precisos para modelos como DALL·E o Midjourney. Desde la estética cinematográfica hasta composiciones publicitarias con estilo DSLR, combinamos <em>narrativa visual, dirección de arte</em> y <em>automatización GPT</em> para que cada imagen cuente una historia con intención y emoción. Inspirado en el arte, el cine y la tecnología.<br><br>
-
-  <!-- 🧠 Icono colorido -->
-  <svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:6px;" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" style="stop-color:#6A82FB;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#FC5C7D;stop-opacity:1" />
-      </linearGradient>
-    </defs>
-    <path fill="url(#grad2)" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-  </svg>
-  <strong>Composición, estilo y automatización</strong><br>
-  Adaptamos cada prompt a fines comerciales, editoriales o conceptuales. Usamos arquetipos visuales, espacio negativo <code>(espacionegativo-)</code>, lentes narrativos y curaduría estética para lograr <u>resultados visuales que emocionan y venden</u>. Integra tus ideas a flujos automatizados con GPTs personalizados, exportaciones y branding visual.<br><br>
-
-  <!-- 🚀 Icono cohete colorido -->
-  <svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align:middle; margin-right:6px;" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" style="stop-color:#00C9FF;stop-opacity:1" />
-        <stop offset="100%" style="stop-color:#92FE9D;stop-opacity:1" />
-      </linearGradient>
-    </defs>
-    <path fill="url(#grad3)" d="M21 3c-2.9 0-5.3 1.2-7.1 3.1L5 15v4h4l8.9-8.9C19.8 8.3 21 5.9 21 3zM3 21h3v-3H3v3z"/>
-  </svg>
-  <strong>¿Listo para transformar tu visión en imagen?</strong><br>
-  <em>Activa tu creatividad visual con inteligencia. Diseña campañas, conceptos y experiencias visuales sin límites.</em><br><br>
-
-  <a href="#contacto" style="display:inline-block;padding:10px 16px;background:#000;color:#fff;border-radius:8px;text-decoration:none;font-weight:bold;font-size:14px;">
-    🚀 Genera tu primer prompt ahora
-  </a>
-</p>
-      </div>
+      <p>
+        Transforma ideas complejas en imágenes poderosas con prompts precisos. Desde la estética cinematográfica hasta composiciones publicitarias estilo DSLR. Integra storytelling, dirección de arte y automatización GPT para comunicar con emoción e intención.
+      </p>
+      <a href="https://julio-bautista.github.io/gpts/gpt-demo.html#formulario-demo" target="_blank" class="cta-button">
+        <!-- SVG de cohete -->
+        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00C9FF" />
+              <stop offset="100%" stop-color="#92FE9D" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#gradBtn)" d="M21 3c-2.9 0-5.3 1.2-7.1 3.1L5 15v4h4l8.9-8.9C19.8 8.3 21 5.9 21 3zM3 21h3v-3H3v3z"/>
+        </svg>
+        Genera tu primer prompt ahora
+      </a>
     </div>
   </div>
 </section>
