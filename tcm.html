@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Traga y Llora - GPT</title>
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -47,40 +48,115 @@
         width: 100%;
       }
     }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 201, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0); }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      color: white;
+      background: linear-gradient(45deg, #00C9FF, #92FE9D);
+      background-size: 200% 200%;
+      animation: gradientShift 5s ease infinite, pulse 2s infinite;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.06);
+      filter: brightness(1.1);
+    }
   </style>
+
 </head>
 <body>
 
 <header>
-  <h1 style="text-align:center; color:white; padding:2rem; background:#004d40;">Traga y Llora GPT</h1>
+ <header style="background-image: url('demos/tcm/banner-tcm.jpg'); background-size: cover; background-position: center; color: white; height: 400px; display: flex; align-items: center; justify-content: center; text-align: center;">
+  <h1></h1>
 </header>
 
 <section>
   <div class="row">
-    <img src="demos/tcm/logo-tyll.jpg" alt="Logo Traga y Llora">
+    <img src="demos/tcm/logo-tcm.jpg" alt="">
     <div class="text-block">
-      <div class="label">Conceptos</div>
-      <p>Identidad visual con estilo ilustrado y fuerte carga emocional. La hamburguesa con rostro triste representa el humor ácido y la experiencia sensorial intensa de la marca.</p>
+      <div class="label">🚀 ¿QUÉ ES ¡THA CLICK MONSTA!</div>
+      <p>Imagina tener en tu equipo a un creador experto en contenido viral que no solo entiende las redes sociales, sino que domina el arte de provocar emociones, clicks y conversiones.
+<p>
+Tha Click Monsters no es una IA cualquiera. Es una bestia creativa entrenada por un experto en marketing digital e inteligencia artificial con más de 20 años de experiencia.
+<p>
+Nos dirigimos a ti, content manager, que diseñas estrategias con base en narrativas, insights y data. Sabes que el algoritmo cambia, pero las emociones no. Por eso, esta herramienta no solo reacciona: anticipa, crea y conecta.</p>
+</div>
+  </div>
+</section>
+
+<section>
+  <div class="row">
+    <img src="demos/tcm/capacidades-tcm.jpg" alt="Capacidades del GPT">
+    <div class="text-block">
+      <div class="label">🎯 QUÉ NOS HACE DIFERENTES</div>
+      <p>Este GPT crea campañas virales para empresas, instituciones y marca personal, redacta descripciones impactantes, diseña slogans originales y genera propuestas visuales temáticas en segundos.
+<p>
+🔥 HECHO PARA CRECER CONTIGO
+<li>¿Tienes una idea vaga? Te damos 3 enfoques.<p>
+<li>¿Una imagen? La convertimos en contenido viral.<p>
+<li>¿Una campaña? Creamos variantes por canal con storytelling emocional, visual e interactivo.
+<p>
+Y TODO ESTO, CON LA RAPIDEZ DE LA IA Y LA SENSIBILIDAD DE UN CREATIVO SENIOR.
+</p>
+<li>Hooks que atrapan en 2 segundos
+<p>
+<li>Storytelling emocional o conflictivo que se adapta a cada red
+<p>
+<li>Guiones para TikToks, Reels y Shorts con secuencias virales
+<p>
+<li>Hilos para X (Twitter) con estrategia de lectura y cierre potente
+<p>
+<li>Variantes A/B para campañas multicanal (Instagram, Facebook, LinkedIn, YouTube)
+<p>
+<li>Copys sensoriales con metáforas, preguntas gatillo y lenguaje visual
+<p>
+<li>Análisis de tendencias, optimización por métricas y targeting cruzado
+<p>
+<li>Imagen + texto integrados con prompts hiperrealistas listos para publicar
+</li>
+</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="row">
-    <img src="demos/tcm/capacidades.jpg" alt="Capacidades del GPT">
-    <div class="text-block">
-      <div class="label">Capacidades y funciones del GPT</div>
-      <p>Este GPT crea campañas virales para restaurantes, redacta descripciones impactantes, diseña slogans originales y genera propuestas visuales temáticas en segundos.</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="row">
-    <img src="demos/tcm/brandkit.jpg" alt="Brandkit Traga y Llora">
-    <div class="text-block">
-      <div class="label">Brandkit</div>
-      <p>Kit gráfico con aplicaciones en camisetas, empaques y vasos. Ideal para reforzar la personalidad de marca en puntos de venta, redes sociales y promociones físicas.</p>
+       <div class="text-block">
+      <div class="label">📣 ÚNETE A LA ERA DEL STORYTELLING VIRAL</div>
+      <p>
+¿Estás listo para que tus ideas no solo se publiquen, sino que trasciendan?
+<li>Activa ya Tha Click Monsters y lleva tu estrategia de contenidos al siguiente nivel.</li>
+<p>
+<a href="https://julio-bautista.github.io/gpts/gpt-demo.html#formulario-demo" target="_blank" class="cta-button">
+        <!-- SVG de cohete -->
+        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00C9FF" />
+              <stop offset="100%" stop-color="#92FE9D" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#gradBtn)" d="M21 3c-2.9 0-5.3 1.2-7.1 3.1L5 15v4h4l8.9-8.9C19.8 8.3 21 5.9 21 3zM3 21h3v-3H3v3z"/>
+        </svg>
+        👉SOLICITA ACCESO Y COMIENZA A HACER CONTENIDO VIRAL.
+      </a>
     </div>
   </div>
 </section>

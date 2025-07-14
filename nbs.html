@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NÓMADA BRAND STUDIO</title>
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -47,20 +48,56 @@
         width: 100%;
       }
     }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 201, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0); }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      color: white;
+      background: linear-gradient(45deg, #00C9FF, #92FE9D);
+      background-size: 200% 200%;
+      animation: gradientShift 5s ease infinite, pulse 2s infinite;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.06);
+      filter: brightness(1.1);
+    }
   </style>
+
 </head>
 <body>
 
-<header>
-  <h1 style="text-align:center; color:white; padding:2rem; background:#004d40;">NÓMADA BRAND STUDIO</h1>
+<header style="background-image: url('demos/nbs/banner-nbs.jpg'); background-size: cover; background-position: center; color: white; height: 400px; display: flex; align-items: center; justify-content: center; text-align: center;">
+  <h1></h1>
 </header>
 
 <section>
   <div class="row">
-    <img src="demos/nbs/concepto.jpg" alt="Concepto NÓMADA BRAND STUDIO">
+    <img src="demos/nbs/logo-nbs.jpg" alt="Concepto NÓMADA BRAND STUDIO">
     <div class="text-block">
-      <div class="label">Conceptos</div>
-      <p>Construcción visual de marca desde cero con herramientas IA.</p>
+      <div class="label">🚀 Diseña un Logo con Personalidad, Precisión y Poder de Conexión</div>
+<p>
+Crear un logo no es solo diseñar una imagen: es darle rostro, carácter y alma a tu marca. Si eres emprendedor y buscas proyectar una identidad única que hable por ti incluso antes de que lo hagas tú, estás en el lugar correcto.
+<p>
+Soy un sistema de diseño potenciado por la experiencia combinada de los 20 diseñadores de logotipos más influyentes de la historia moderna: combinando precisión, elegancia, audacia y la fuerza conceptual de Paula Scher. 
+<p>
+Canalizo esta sabiduría para ayudarte a crear un logotipo que sea minimalista, funcional y emocionalmente inolvidable, sin que tengas que dominar técnicas artísticas, iluminación, lenguaje publicitario ni teoría del diseño.
+</p>
     </div>
   </div>
 </section>
@@ -69,18 +106,57 @@
   <div class="row">
     <img src="demos/nbs/ejemplo.jpg" alt="Capacidades NÓMADA BRAND STUDIO">
     <div class="text-block">
-      <div class="label">Capacidades y funciones del GPT</div>
-      <p>Genera logos, paletas y estilos visuales alineados a tu sector.</p>
+      <div class="label">✨ ¿Qué tipo de logo necesitas? Yo puedo crearlo.</div>
+<p>
+Adapto cada diseño a tu tipo de negocio, producto o marca personal con precisión quirúrgica. Estos son los tipos de logo que puedo generar, en función de lo que quieras comunicar:
+<p>
+Logotipo (solo texto): ideal si tu nombre ya es fuerte por sí mismo.
+<p>
+Isotipo (solo símbolo): perfecto para apps, productos digitales o marcas globales.
+<p>
+Imagotipo (símbolo + texto separados): versátil y adaptable para todo tipo de medios.
+<p>
+Isologo (símbolo + texto integrados): cohesión total, ideal para instituciones o negocios tradicionales.
+<p>
+Monograma (iniciales creativas): exclusivo y sofisticado, muy usado en moda o marcas personales premium.
+<p>
+Cada creación se inspira en tu esencia como emprendedor: tu visión, tus valores y el impacto que deseas dejar en quienes eligen lo que tú ofreces.
+</p>
+<p>
+<strong>🧬 ¿Qué me hace diferente?</strong>
+<p>
+<li>Trabajo con un sistema de revisión en capas que garantiza que cada diseño esté alineado con tu visión estratégica, sea técnicamente perfecto, visualmente impactante y comunicativamente claro.
+<p>
+<li>Puedo convertir instrucciones simples en identidades visuales sofisticadas y memorables.
+<p>
+<li>Integro automáticamente conocimientos de color, tipografía, composición, espacio negativo, estilos fotográficos y branding emocional.
+<p>
+<li>No solo diseño un logo: creo un símbolo de confianza para tus clientes.
+</p>
     </div>
   </div>
 </section>
-
 <section>
   <div class="row">
-    <img src="demos/nbs/brandkit.jpg" alt="Brandkit NÓMADA BRAND STUDIO">
     <div class="text-block">
-      <div class="label">Brandkit</div>
-      <p>Muestras para redes, etiquetas, firmas, productos y prototipos físicos.</p>
+      <div class="label">🧠 Da el primer paso hacia una marca inolvidable</div>
+<p>
+<li>Diseña tu identidad visual con IA
+<li>Estás a solo una decisión de tener un logo que hable por ti.
+<li>Haz clic aquí y comienza a diseñar la identidad que tu emprendimiento merece.
+     </p>
+      <a href="https://julio-bautista.github.io/gpts/gpt-demo.html#formulario-demo" target="_blank" class="cta-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00C9FF" />
+              <stop offset="100%" stop-color="#92FE9D" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#gradBtn)" d="M21 3c-2.9 0-5.3 1.2-7.1 3.1L5 15v4h4l8.9-8.9C19.8 8.3 21 5.9 21 3zM3 21h3v-3H3v3z"/>
+        </svg>
+        👉 Crea tu logotipo ahora.
+      </a>
     </div>
   </div>
 </section>

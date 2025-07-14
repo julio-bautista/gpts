@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -47,40 +46,101 @@
         width: 100%;
       }
     }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 201, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0); }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      color: white;
+      background: linear-gradient(45deg, #00C9FF, #92FE9D);
+      background-size: 200% 200%;
+      animation: gradientShift 5s ease infinite, pulse 2s infinite;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.06);
+      filter: brightness(1.1);
+    }
+    .center {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1 style="text-align:center; color:white; padding:2rem; background:#004d40;">ThumBaitCracks</h1>
+<header style="background-image: url('demos/tbc/banner-tbc.jpg'); background-size: cover; background-position: center; color: white; height: 400px; display: flex; align-items: center; justify-content: center; text-align: center;">
+  <h1></h1>
 </header>
 
 <section>
   <div class="row">
-    <img src="demos/tbc/concepto.jpg" alt="Concepto ThumBaitCracks">
+    <img src="demos/tbc/logo-tbc.jpg" alt="Concepto ThumBaitCracks">
     <div class="text-block">
-      <div class="label">Conceptos</div>
-      <p>Diseño de miniaturas virales con foco emocional y visual impactante.</p>
+      <div class="label">ThumBaitCracks</div>
+      <p>DISEÑO DE MINIATURAS VIRALES CON FOCO EMOCIONAL Y VISUAL IMPACTANTE.</p>
+      <p>🎨 Deja de ser “uno más” en el feed<br>
+      Tu contenido es fuego, pero… ¿tu miniatura lo demuestra?<br>
+      Si no detiene el scroll en 1.4 segundos, estás perdiendo vistas.<br>
+      Aquí no venimos a “mejorar” tu imagen. Venimos a hacerla imposible de ignorar.</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="row">
-    <img src="demos/tbc/capacidades.jpg" alt="Capacidades ThumBaitCracks">
+    <img src="demos/tbc/capacidades-tbc.jpg" alt="Capacidades ThumBaitCracks">
     <div class="text-block">
-      <div class="label">Capacidades y funciones del GPT</div>
+      <div class="label">CAPACIDADES Y FUNCIONES DEL GPT</div>
       <p>Desarrolla composiciones para gaming, educación, música y lifestyle.</p>
+      <p>⚡ Lo que otros prometen, aquí lo ejecutamos:<br>
+      Visuales que revientan la atención: aplicamos técnicas de composición espacionegativo y estética DSLR con precisión quirúrgica.<br>
+      Revisión brutal por capas: estrategia, técnica, emoción, estilo y QA. Cero improvisación, todo intención.<br>
+      Texto que pica y convierte: Activa el deseo y CTA que dan ganas de hacer clic.<br>
+      Contenido con forma de viralidad: entregamos en vertical, horizontal o cuadrado—listo para prender YouTube, TikTok o Instagram.<br>
+      Sin bullshit visual: sin filtros de más, sin efectos huecos. Solo realismo pro, fidelidad y actitud.</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="row">
-    <img src="demos/tbc/brandkit.jpg" alt="Brandkit ThumBaitCracks">
     <div class="text-block">
-      <div class="label">Brandkit</div>
-      <p>Incluye ejemplos adaptables, títulos de alto clic y layouts por categoría.</p>
+      <div class="label">SOLICITA ACCESO Y PRUEBA EL GPT EN ACCIÓN.</div>
+      <p>🔥 Si tu video es oro, tu portada debe ser dinamita<br>
+      Deja de mendigar clics. Empieza a provocar reacciones.<br>
+      👉 Activa tu primer diseño ahora. Vamos a romper la métrica.</p>
+    </div>
+<p>
+</p>
+    <div class="center">
+      
+      <a href="https://julio-bautista.github.io/gpts/gpt-demo.html#formulario-demo" target="_blank" class="cta-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00C9FF" />
+              <stop offset="100%" stop-color="#92FE9D" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#gradBtn)" d="M21 3c-2.9 0-5.3 1.2-7.1 3.1L5 15v4h4l8.9-8.9C19.8 8.3 21 5.9 21 3zM3 21h3v-3H3v3z"/>
+        </svg>
+        ¡Crea tu miniatura ahora!
+      </a>
+    
     </div>
   </div>
 </section>
@@ -88,7 +148,7 @@
 <footer style="text-align: center; background: #004d40; color: white; padding: 2rem 1rem; margin-top: 3rem;">
   <p>Julio Bautista – Consultor en marketing digital e IA</p>
   <p>Este sitio no pertenece a OpenAI. Los asistentes fueron diseñados con tecnología GPT personalizada.</p>
-  <p>Visita mi sitio web: <a href="https://caipi.tech/" target="_blank" style="color: #a8dadc;">caipi.tech</a></p>
+  <p>Visita mi sitio web: <a href="https://caipi.tech/" target="_blank" style="color: #a8dadc; font-weight: bold;">caipi.tech</a></p>
 </footer>
 
 </body>

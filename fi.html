@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>FOTOS IMPRESIONANTES</title>
+  
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -47,40 +48,103 @@
         width: 100%;
       }
     }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(0, 201, 255, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 201, 255, 0); }
+    }
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      color: white;
+      background: linear-gradient(45deg, #00C9FF, #92FE9D);
+      background-size: 200% 200%;
+      animation: gradientShift 5s ease infinite, pulse 2s infinite;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.06);
+      filter: brightness(1.1);
+    }
   </style>
+
 </head>
 <body>
-
-<header>
-  <h1 style="text-align:center; color:white; padding:2rem; background:#004d40;">FOTOS IMPRESIONANTES</h1>
+<header style="background-image: url('demos/fi/banner-fi.jpg'); background-size: cover; background-position: center; color: white; height: 400px; display: flex; align-items: center; justify-content: center; text-align: center;">
+<h1></h1>
 </header>
 
 <section>
   <div class="row">
-    <img src="demos/fi/boceto.jpg" alt="Concepto FOTOS IMPRESIONANTES">
+    <img src="demos/fi/logo-fi.jpg" alt="Concepto FOTOS IMPRESIONANTES">
     <div class="text-block">
-      <div class="label">Conceptos</div>
-      <p>Hiperrealismo visual para campañas, redes y anuncios a partir de fotos básicas.</p>
+      <div class="label">✨Crea imágenes impactantes con solo escribir lo que imaginas.</div>
+      <p> Da vida a tus ideas sin dominar el arte, crenado imagenes hiperrealismo visual para campañas, redes y anuncios a partir de fotos de celular, dibujos o una idea báscia.
+<p>
+¿Eres diseñador o fotógrafo en formación y sueñas con crear imágenes poderosas mejorando técnicas de iluminación, encuadre o estilos artísticos? Esta herramienta es para ti.
+<p>
+Con nuestra plataforma, no necesitas ser un experto para lograr resultados de experto. Basta con describir tu visión: desde "una botella flotando entre rayos de luz" hasta "un retrato con fondo urbano al atardecer". El sistema transforma tus palabras en visuales realistas, cinematográficos o editoriales con calidad profesional.
+</p>
     </div>
   </div>
 </section>
 
 <section>
   <div class="row">
-    <img src="demos/fi/resultado.jpg" alt="Capacidades FOTOS IMPRESIONANTES">
+    <img src="demos/fi/capacidades-fi.jpg" alt="Capacidades FOTOS IMPRESIONANTES">
     <div class="text-block">
-      <div class="label">Capacidades y funciones del GPT</div>
-      <p>Convierte bocetos, textos o imágenes simples en visuales premium para publicidad.</p>
+      <div class="label">🛠️ ¿Qué hace diferente a esta herramienta?</div>
+      <p>
+<li> Convierte bocetos, textos o imágenes simples en visuales premium para publicidad.
+ <p>
+<li>🎨 Cero conocimientos técnicos: No necesitas saber de cámaras, lentes ni teoría del color.
+ <p>
+<li>💡 Creatividad asistida por IA: Solo escribe lo que imaginas y obtén un resultado visual listo para compartir.
+ <p>
+ <li>📷 Estética profesional garantizada: Desde retratos íntimos hasta campañas publicitarias con impacto.
+ <p>
+<li>🖼️ Formatos adaptables: Vertical para Instagram, horizontal para web, cuadrado para portafolios.
+ <p>
+ <li>🧠 Inspiración guiada: Incluye sugerencias, estilos y emociones para que afines tu visión sin complicarte.
+ <p>
+</li>
+<div class="label">No se trata de dominar el arte, sino de expresarte con libertad. Nosotros traducimos tu emoción en imagen.</div>
+    <p>Incluye efectos de edición, composiciones de producto, iluminación y formatos de exportación.</p>
+</p>
     </div>
   </div>
 </section>
-
 <section>
   <div class="row">
-    <img src="demos/fi/brandkit.jpg" alt="Brandkit FOTOS IMPRESIONANTES">
     <div class="text-block">
-      <div class="label">Brandkit</div>
-      <p>Incluye efectos de edición, composiciones de producto, iluminación y formatos de exportación.</p>
+      <div class="label">📷 Empieza ahora. Deja que tus palabras creen lo que tus ojos aún no ven.</div>
+<p>
+<li>Genera visuales impresionantes desde tu celular
+<p>
+<li>Lleva tus ideas a otro nivel con efectos cinematográficos, composiciones profesionales y un generador que entiende estética visual.</li></p>
+      <a href="https://julio-bautista.github.io/gpts/gpt-demo.html#formulario-demo" target="_blank" class="cta-button">
+        <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="gradBtn" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00C9FF" />
+              <stop offset="100%" stop-color="#92FE9D" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#gradBtn)" d="M21 3c-2.9 0-5.3 1.2-7.1 3.1L5 15v4h4l8.9-8.9C19.8 8.3 21 5.9 21 3zM3 21h3v-3H3v3z"/>
+        </svg>
+        Genera tus imágenes ahora.
+      </a>
     </div>
   </div>
 </section>
